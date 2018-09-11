@@ -1,5 +1,10 @@
 function whatsMyContext(){ return this; }
 /* This will return 'window' object */
+function whatsMyContextStrict(){
+    "use strict";
+    return this;
+}
+/* This returns 'undefined' value */
 let getMyThis = whatsMyContext;
 /* This also returns 'window' object when called e.g. getMyThis(); */
 let ninja1 = { getMyThis: whatsMyContext };
